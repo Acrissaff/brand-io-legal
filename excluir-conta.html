@@ -1,0 +1,133 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Excluir minha conta — Brand.io</title>
+<style>
+:root{--fg:#09090B;--muted:#475569;--border:#E4E4E7;--accent:#EC4899;--bg:#FAFAFA;--card:#FFF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+header{background:linear-gradient(120deg,#18181B,#3B1D2E 55%,#EC4899);color:#fff;padding:28px 20px 22px}
+.wrap{max-width:760px;margin:0 auto}
+header a{color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.02em;font-size:20px}
+header p{margin:6px 0 0;color:#F5D0FE;font-size:13px}
+main{max-width:760px;margin:0 auto;padding:28px 20px 64px}
+h1{font-size:26px;line-height:1.25;letter-spacing:-.02em;margin:0 0 6px}
+h2{font-size:18px;margin:34px 0 8px;letter-spacing:-.01em}
+h3{font-size:15px;margin:20px 0 4px}
+p,li{color:#27272A}
+ul{padding-left:22px}
+li{margin:4px 0}
+small,.meta{color:var(--muted);font-size:13px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:16px 0}
+.grid{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+a.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:12px;margin:6px 8px 6px 0}
+a.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+code{background:#F4F4F5;padding:1px 5px;border-radius:5px;font-size:13px}
+label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+input{width:100%;padding:12px 13px;border:1px solid var(--border);border-radius:10px;font-size:15px;background:#fff}
+button{background:#DC2626;color:#fff;border:0;border-radius:12px;padding:13px 18px;font-size:15px;font-weight:700;margin-top:16px;cursor:pointer}
+button:disabled{opacity:.55;cursor:default}
+.aviso{background:#FEF2F2;border:1px solid #FECACA;color:#7F1D1D;border-radius:12px;padding:14px 16px;font-size:14px}
+.ok{background:#F0FDF4;border:1px solid #BBF7D0;color:#14532D;border-radius:12px;padding:14px 16px;font-size:14px}
+footer{border-top:1px solid var(--border);margin-top:40px;padding-top:16px;font-size:13px;color:var(--muted)}
+</style>
+</head><body>
+<header><div class="wrap"><a href="index.html">Brand.io</a>
+<p>Documentos legais · versão 2026-11-06.2</p></div></header>
+<main><h1>Excluir minha conta</h1>
+<p class="meta">Brand.io · exclusão permanente de conta e dados</p>
+
+<div class="aviso"><strong>Isto é permanente.</strong> A exclusão apaga a conta, o perfil da marca, os prompts, as artes (inclusive os arquivos de imagem), os créditos, o histórico de uso e as denúncias de conteúdo que você registrou. Assinaturas ativas são canceladas. Não é possível recuperar depois.</div>
+
+<p class="meta">Depois da exclusão sobra apenas um registro de auditoria da própria exclusão (UUID da conta e hash do e-mail — nunca o e-mail), guardado por 5 anos para comprovar o atendimento do pedido.</p>
+
+<h2>Pelo aplicativo (mais rápido)</h2>
+<ol>
+<li>Abra o Brand.io e toque no menu (canto superior esquerdo).</li>
+<li>Entre em <strong>Privacidade e conta</strong>.</li>
+<li>Toque em <strong>Excluir minha conta</strong> e confirme digitando <code>EXCLUIR</code>.</li>
+</ol>
+
+<h2>Por esta página</h2>
+<p>Entre com a mesma conta do app. A exclusão acontece na hora, com o mesmo efeito da opção dentro do aplicativo.</p>
+
+<div class="card">
+  <label for="email">E-mail da conta</label>
+  <input id="email" type="email" autocomplete="username" placeholder="voce@exemplo.com">
+  <label for="senha">Senha</label>
+  <input id="senha" type="password" autocomplete="current-password" placeholder="Sua senha">
+  <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400;margin-top:16px">
+    <input id="ciente" type="checkbox" style="width:auto;margin-top:4px">
+    <span>Entendo que a exclusão é permanente e que perderei as artes e os créditos.</span>
+  </label>
+  <button id="btn" type="button">Excluir minha conta definitivamente</button>
+  <p id="msg" class="meta" style="margin-top:14px"></p>
+</div>
+
+<p class="meta">Se você entrou com Google ou outro provedor e não tem senha, ou se prefere pedir por e-mail, escreva para <a href="mailto:privacidade@labcrissaff.com?subject=Exclus%C3%A3o%20de%20conta%20-%20Brand.io">privacidade@labcrissaff.com</a> a partir do endereço cadastrado. Atendemos em até 15 dias.</p>
+
+<script>
+const SB = "https://betxmymqrrjudjtvdeax.supabase.co";
+const ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJldHhteW1xcnJqdWRqdHZkZWF4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg4MDU3ODIsImV4cCI6MjEwNDM4MTc4Mn0.xJ_hK56dpAEa8-sHCDX05e7RWrX8gV9vERycFjW4uj4";
+const btn = document.getElementById('btn');
+const msg = document.getElementById('msg');
+
+function aviso(texto, classe) {
+  msg.className = classe;
+  msg.textContent = texto;
+}
+
+btn.addEventListener('click', async () => {
+  const email = document.getElementById('email').value.trim().toLowerCase();
+  const senha = document.getElementById('senha').value;
+  const ciente = document.getElementById('ciente').checked;
+
+  if (!email || !senha) return aviso('Preencha e-mail e senha.', 'aviso');
+  if (!ciente) return aviso('Marque a confirmação de que entende que a exclusão é permanente.', 'aviso');
+
+  btn.disabled = true;
+  aviso('Entrando na conta…', 'meta');
+  try {
+    const login = await fetch(SB + '/auth/v1/token?grant_type=password', {
+      method: 'POST',
+      headers: { apikey: ANON, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: senha }),
+    });
+    const sessao = await login.json();
+    if (!login.ok || !sessao.access_token) {
+      throw new Error('E-mail ou senha incorretos.');
+    }
+
+    aviso('Excluindo conta e arquivos…', 'meta');
+    const r = await fetch(SB + '/functions/v1/excluir-conta', {
+      method: 'POST',
+      headers: {
+        apikey: ANON,
+        Authorization: 'Bearer ' + sessao.access_token,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ confirmar: 'EXCLUIR', origem: 'web' }),
+    });
+    const dados = await r.json().catch(() => ({}));
+    if (!r.ok || !dados.ok) {
+      throw new Error(dados.erro === 'CONFIRMACAO_OBRIGATORIA'
+        ? 'Confirmação recusada pelo servidor. Tente novamente pelo app.'
+        : 'Não foi possível concluir agora. Tente de novo ou escreva para privacidade@labcrissaff.com.');
+    }
+
+    document.getElementById('senha').value = '';
+    aviso('Conta excluída. Seus dados e arquivos foram apagados. Você pode fechar esta página.', 'ok');
+    btn.textContent = 'Conta excluída';
+  } catch (e) {
+    aviso(e.message || 'Falha inesperada.', 'aviso');
+    btn.disabled = false;
+  }
+});
+</script>
+<footer>Brand.io · Amyr Crissaff Silva · Rio de Janeiro/RJ · <a href="mailto:privacidade@labcrissaff.com">privacidade@labcrissaff.com</a><br>
+Versão 2026-11-06.2 — atualizada em 6 de novembro de 2026.</footer>
+</main></body></html>
