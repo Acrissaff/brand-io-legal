@@ -1,0 +1,158 @@
+<!doctype html><html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Política de Privacidade — Brand.io</title>
+<style>
+:root{--fg:#09090B;--muted:#475569;--border:#E4E4E7;--accent:#EC4899;--bg:#FAFAFA;--card:#FFF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+header{background:linear-gradient(120deg,#18181B,#3B1D2E 55%,#EC4899);color:#fff;padding:28px 20px 22px}
+.wrap{max-width:760px;margin:0 auto}
+header a{color:#fff;text-decoration:none;font-weight:800;letter-spacing:-.02em;font-size:20px}
+header p{margin:6px 0 0;color:#F5D0FE;font-size:13px}
+main{max-width:760px;margin:0 auto;padding:28px 20px 64px}
+h1{font-size:26px;line-height:1.25;letter-spacing:-.02em;margin:0 0 6px}
+h2{font-size:18px;margin:34px 0 8px;letter-spacing:-.01em}
+h3{font-size:15px;margin:20px 0 4px}
+p,li{color:#27272A}
+ul{padding-left:22px}
+li{margin:4px 0}
+small,.meta{color:var(--muted);font-size:13px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:16px 0}
+.grid{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+a.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:12px;margin:6px 8px 6px 0}
+a.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+code{background:#F4F4F5;padding:1px 5px;border-radius:5px;font-size:13px}
+label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+input{width:100%;padding:12px 13px;border:1px solid var(--border);border-radius:10px;font-size:15px;background:#fff}
+button{background:#DC2626;color:#fff;border:0;border-radius:12px;padding:13px 18px;font-size:15px;font-weight:700;margin-top:16px;cursor:pointer}
+button:disabled{opacity:.55;cursor:default}
+.aviso{background:#FEF2F2;border:1px solid #FECACA;color:#7F1D1D;border-radius:12px;padding:14px 16px;font-size:14px}
+.ok{background:#F0FDF4;border:1px solid #BBF7D0;color:#14532D;border-radius:12px;padding:14px 16px;font-size:14px}
+footer{border-top:1px solid var(--border);margin-top:40px;padding-top:16px;font-size:13px;color:var(--muted)}
+</style>
+</head><body>
+<header><div class="wrap"><a href="index.html">Brand.io</a>
+<p>Documentos legais · versão 2026-11-06.2</p></div></header>
+<main><h1>Política de Privacidade</h1>
+<p class="meta">Brand.io · versão 2026-11-06.2 · atualizada em 6 de novembro de 2026</p>
+
+<p>Esta política explica como o Brand.io trata seus dados pessoais, conforme a Lei nº 13.709/2018 (LGPD). Ela vale para o aplicativo Android e para as páginas web do serviço.</p>
+
+<h2>1. Quem é o controlador</h2>
+<div class="card">
+<p><strong>Amyr Crissaff Silva</strong>, pessoa física, desenvolvedor independente do Brand.io, Rio de Janeiro/RJ.<br>
+Contato do encarregado de dados (DPO): <a href="mailto:privacidade@labcrissaff.com">privacidade@labcrissaff.com</a>.</p>
+</div>
+<p>Controlador é quem decide sobre o tratamento dos dados. O encarregado é o canal para exercer seus direitos e tirar dúvidas.</p>
+
+<h2>2. Quais dados coletamos</h2>
+<p>Só o necessário para o app funcionar. Nada de localização, contatos, agenda, microfone ou câmera em segundo plano.</p>
+
+<h3>2.1 Dados de conta</h3>
+<ul>
+<li><strong>E-mail</strong> e <strong>senha</strong>. A senha é guardada como hash pelo Supabase Auth; não temos acesso a ela.</li>
+<li><strong>Identificador interno</strong> da conta (UUID).</li>
+<li><strong>Confirmação de e-mail</strong> (se você confirmou o endereço).</li>
+</ul>
+
+<h3>2.2 Perfil da marca (o que você digita)</h3>
+<ul>
+<li>Nome, slogan, descrição e setor da marca.</li>
+<li>Cores, tipografia, tags, regras de estilo e opções personalizadas.</li>
+<li>Dados de contato que você optar por incluir (WhatsApp, Instagram, telefone).</li>
+<li>Logotipo ou imagens de referência que você enviar.</li>
+</ul>
+
+<h3>2.3 Prompts e artes</h3>
+<ul>
+<li>Título, descrição, configurações e o texto final do prompt.</li>
+<li>Imagens geradas, marcações de favorito e metadados (formato, tamanho, data).</li>
+<li>Consumo de créditos e histórico de uso (para cobrança e suporte).</li>
+</ul>
+
+<h3>2.4 Dados de pagamento</h3>
+<ul>
+<li>CPF, quando exigido para emissão de cobrança — guardado de forma <strong>cifrada</strong> e também como <strong>hash</strong> (para impedir duplicidade), nunca em texto puro.</li>
+<li>Identificador de cliente no Stripe, bandeira e <strong>últimos 4 dígitos</strong> do cartão.</li>
+<li><strong>Não armazenamos o número completo do cartão nem o código de segurança.</strong> Esses dados ficam apenas no Stripe.</li>
+</ul>
+
+<h3>2.5 Dados técnicos e de segurança</h3>
+<ul>
+<li><strong>Hash</strong> do endereço IP e de identificadores do dispositivo no cadastro, para prevenir criação de contas em massa e uso indevido de créditos gratuitos.</li>
+<li>Registros de acesso e de erro gerados pela infraestrutura.</li>
+<li>Eventos de uso do app (telas abertas, gerações, falhas) identificados pelo <strong>UUID da conta</strong> — nunca pelo e-mail. Você pode desativar esse envio em <strong>Privacidade e conta → Enviar dados de uso</strong>; ao desativar, nada é enviado.</li>
+</ul>
+
+<h3>2.6 Denúncias de conteúdo</h3>
+<p>Se você sinalizar uma arte gerada como inadequada, guardamos: a <strong>arte sinalizada</strong>, o <strong>motivo</strong> escolhido (nudez, violência, discurso de ódio, direito autoral ou outro), o <strong>texto livre</strong> que você escrever (opcional) e a <strong>data</strong>. Usamos esses dados apenas para analisar a denúncia e tomar providências. A denúncia não é publicada e não é visível para outros usuários.</p>
+
+<h2>3. Para que usamos (e com qual base legal)</h2>
+<table>
+<tr><th>Finalidade</th><th>Base legal (LGPD art. 7)</th></tr>
+<tr><td>Criar e manter sua conta; gerar as artes; entregar o serviço</td><td>Execução de contrato (V)</td></tr>
+<tr><td>Cobrança, notas e obrigações fiscais</td><td>Execução de contrato e obrigação legal (V e II)</td></tr>
+<tr><td>Prevenção a fraude e segurança do serviço</td><td>Legítimo interesse (IX)</td></tr>
+<tr><td>Suporte e resposta a solicitações</td><td>Execução de contrato (V)</td></tr>
+<tr><td>Analisar denúncias de conteúdo e cumprir as diretrizes de conteúdo gerado por IA</td><td>Legítimo interesse (IX) e cumprimento de obrigação legal (II)</td></tr>
+<tr><td>Melhorar o produto com métricas agregadas</td><td>Legítimo interesse (IX)</td></tr>
+<tr><td>Comunicações de marketing</td><td>Consentimento (I) — pode ser revogado a qualquer momento</td></tr>
+</table>
+
+<h2>4. Com quem compartilhamos</h2>
+<p>Não vendemos seus dados. Compartilhamos apenas com fornecedores necessários ao serviço, cada um com sua função:</p>
+<table>
+<tr><th>Fornecedor</th><th>Para quê</th><th>Onde trata</th></tr>
+<tr><td>Supabase</td><td>banco de dados, autenticação, armazenamento de arquivos</td><td>Brasil (região sa-east-1)</td></tr><tr><td>fal.ai</td><td>geração das imagens por IA a partir do prompt</td><td>Estados Unidos</td></tr><tr><td>Stripe</td><td>processamento de pagamentos e assinaturas</td><td>Estados Unidos</td></tr><tr><td>Google Play</td><td>distribuição do aplicativo e cobrança no Android</td><td>Estados Unidos</td></tr><tr><td>RevenueCat</td><td>gestão das assinaturas compradas na loja do Android</td><td>Estados Unidos</td></tr><tr><td>PostHog</td><td>métricas de uso do app (eventos anônimos; você pode desativar)</td><td>Estados Unidos</td></tr><tr><td>Sentry</td><td>relatórios de falha do app (sem e-mail, prompt ou imagens)</td><td>Estados Unidos</td></tr>
+</table>
+<p><strong>Conteúdo enviado para geração:</strong> para criar uma arte, o texto do prompt e, quando você usa referências, as imagens escolhidas são enviados ao <strong>fal.ai</strong>. Não envie dados sensíveis (saúde, biometria, orientação sexual, convicção política ou religiosa) no prompt ou nas imagens.</p>
+<p><strong>Transferência internacional:</strong> alguns fornecedores tratam dados fora do Brasil (principalmente Estados Unidos). A transferência ocorre com base no art. 33 da LGPD, limitada ao necessário para executar o contrato e com cláusulas contratuais de proteção de dados dos fornecedores.</p>
+
+<h2>5. Por quanto tempo guardamos</h2>
+<table>
+<tr><th>Dado</th><th>Prazo</th></tr>
+<tr><td>Conta, marcas, prompts, artes, créditos e denúncias</td><td>Enquanto a conta existir. Apagados quando você exclui a conta.</td></tr>
+<tr><td>Registros fiscais e financeiros (Stripe)</td><td>5 anos, por obrigação legal e fiscal.</td></tr>
+<tr><td>Trilha de auditoria da exclusão (UUID + hash do e-mail)</td><td>5 anos, para comprovar o atendimento do pedido.</td></tr>
+<tr><td>Hash de IP/dispositivo (antifraude)</td><td>Até 6 meses.</td></tr>
+<tr><td>Registros de acesso e erro</td><td>Até 6 meses.</td></tr>
+</table>
+<p>Depois desses prazos, os dados são eliminados ou anonimizados de forma irreversível.</p>
+
+<h2>6. Seus direitos</h2>
+<p>A qualquer momento você pode pedir, pelo e-mail <a href="mailto:privacidade@labcrissaff.com">privacidade@labcrissaff.com</a>:</p>
+<ul>
+<li>confirmação de que tratamos seus dados e acesso a eles;</li>
+<li>correção de dados incompletos, inexatos ou desatualizados;</li>
+<li>anonimização, bloqueio ou eliminação de dados desnecessários ou excessivos;</li>
+<li>portabilidade dos dados a outro fornecedor;</li>
+<li>informação sobre com quem compartilhamos;</li>
+<li>revogação do consentimento e oposição a tratamentos baseados em legítimo interesse.</li>
+</ul>
+<p>Respondemos em até <strong>15 dias</strong>. Podemos pedir uma confirmação de identidade para não entregar dados à pessoa errada.</p>
+
+<h3>Excluir a conta</h3>
+<p>O app tem a opção <strong>Privacidade e conta → Excluir minha conta</strong>, e a exclusão também pode ser feita nesta página: <a href="excluir-conta.html">excluir minha conta</a>. A exclusão apaga conta, marcas, prompts, artes, créditos e o arquivo de imagem no armazenamento, cancela assinaturas ativas e é <strong>permanente</strong>.</p>
+
+<h2>7. Segurança</h2>
+<p>Os dados trafegam por HTTPS. O banco usa autenticação por conta e regras de acesso por linha (RLS): cada usuário só consegue ler e escrever os próprios registros. O bucket de imagens é privado e o acesso é feito por links assinados e temporários. CPF é guardado cifrado. Ainda assim, nenhum sistema é 100% imune: se ocorrer incidente relevante, comunicamos você e a ANPD, conforme a LGPD.</p>
+
+<h2>8. Menores de idade</h2>
+<p>O Brand.io é destinado a maiores de 18 anos. Não coletamos intencionalmente dados de crianças ou adolescentes. Se identificarmos uma conta nessa situação, ela será encerrada e os dados apagados.</p>
+
+<h2>9. Cookies e páginas web</h2>
+<p>Estas páginas de documentos legais não usam cookies de publicidade nem rastreadores. A página de exclusão de conta usa apenas a sessão necessária para autenticar você no momento do pedido.</p>
+
+<h2>10. Mudanças nesta política</h2>
+<p>Se o texto mudar, a versão e a data no topo mudam junto. Mudanças relevantes são avisadas no app antes de valerem. A versão vigente está sempre nesta página.</p>
+
+<h2>11. Reclamações</h2>
+<p>Se entender que não tratamos seus dados conforme a lei, fale primeiro com o encarregado: <a href="mailto:privacidade@labcrissaff.com">privacidade@labcrissaff.com</a>. Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD) — <a href="https://www.gov.br/anpd" rel="noopener">gov.br/anpd</a>.</p>
+<footer>Brand.io · Amyr Crissaff Silva · Rio de Janeiro/RJ · <a href="mailto:privacidade@labcrissaff.com">privacidade@labcrissaff.com</a><br>
+Versão 2026-11-06.2 — atualizada em 6 de novembro de 2026.</footer>
+</main></body></html>
